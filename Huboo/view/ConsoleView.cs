@@ -57,7 +57,6 @@ namespace Huboo {
             if (ApiKeyEnteredEvt != null) {
                 ApiKeyEnteredEvt.Invoke(val);
             }
-
         }
 
         internal void ShowVehicleNotFound(string reason) {

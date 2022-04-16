@@ -15,7 +15,6 @@ namespace Huboo {
         }
 
         internal void SetApiKey(string apiKey) {
-
             File.WriteAllText(SettingsFullpath, apiKey.Trim());
         }
 

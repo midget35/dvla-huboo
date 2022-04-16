@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 namespace Huboo {
     internal static class JsonHelper {
         
-        internal static string UnArray(string str) {
+        /**
+         * Remove square brackets at start and end of string, as returned by WebClient.
+         */
+        internal static string DeBracket(string str) {
             return str.Substring(1, str.Length - 2);
         }
     }

@@ -69,7 +69,7 @@ namespace Huboo {
                     return;
                 }
 
-                str = JsonHelper.UnArray(str);
+                str = JsonHelper.DeBracket(str);
 
                 try {
                     json = JObject.Parse(str);
@@ -163,6 +163,5 @@ namespace Huboo {
             if (DownloadFail == null) return;
             else DownloadFail.Invoke(reason);
         }
-
     }
 }

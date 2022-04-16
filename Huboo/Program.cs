@@ -7,24 +7,6 @@ using System.Threading.Tasks;
 
 namespace Huboo {
 
-    /*
-    
-    Notes
-    - Netwonsoft JSON library uses MIT license.
-
-    Assumptions:
-    - Valid expiry date is always index zero in MOT array.
-
-
-    Improvements:
-    - Parse all MOT Array items, hash expiry dates, then look for latest date? (in case array order ever changes).
-    - More readable Expiry Date.
-    - Add -help option re-iterating that API Key may need to be incorrect.
-    - Unit testing and all round testing: cache of known registrations and MOT-related facts.
-    - Logs.
-
-     */
-
     class Program {
 
         static ConsoleView consoleView;
@@ -41,12 +23,11 @@ namespace Huboo {
             consoleView.ApiKeyEnteredEvt    += OnApiKeyEntered;
 
             dvlaProxy = new DvlaProxy();
-            dvlaProxy.DownloadOk     += OnDownloadOk;
+            dvlaProxy.DownloadOk    += OnDownloadOk;
             dvlaProxy.DownloadFail  += OnDownloadFail;
 
             if (!settingsProxy.GetApiKeyExists()) {
                 consoleView.RequestApiKey(settingsProxy.SettingsFullpath);
-                
             }
             else {
                 consoleView.StartRegistrationSession();
