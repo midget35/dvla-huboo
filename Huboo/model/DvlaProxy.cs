@@ -109,6 +109,9 @@ namespace Huboo {
             catch (Exception) {
                 return null;
             }
+            // TODO: Found an instance where this arr can be null, and need to review other vars. Needs discussion - ask Sean:
+            if (motArr == null) return null;
+
             uint motFailCount = GetMotFailCount(motArr);
             DateTime expiry = GetMotExpiry(motArr);
 
