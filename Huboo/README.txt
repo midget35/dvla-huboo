@@ -1,6 +1,10 @@
 Sean Sutton (16 April 2022)
 	
+*** IMPORTANT! ***
+If the incorrect API Key is entered the first time this app is run, you will need to MANUALLY DELETE the settings.txt file in the app directory and rerun the application.
+	
 	Notes:
+	- Expected to run out of the box. .NET Framework 4.7.1 and upwards.
     - Newtonsoft JSON library uses MIT license.
 
     Assumptions:
@@ -16,3 +20,7 @@ Sean Sutton (16 April 2022)
     - Dev Logs.
     - Remove obj folder from Source Control.
     - Better API Key user-entry handling and management.
+
+
+*** IMPORTANT! ***
+If the incorrect API Key is entered the first time this app is run, you will need to MANUALLY DELETE
